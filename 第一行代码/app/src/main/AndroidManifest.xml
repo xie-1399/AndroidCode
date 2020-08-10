@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".BoardCast.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".BoardCast.MyBoardCastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.BoardCast.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".BoardCast.Bro_Test" />
+        <activity android:name=".Fragment.Fragment_Middle" />
+        <activity android:name=".Fragment.NewsContentActivity" />
+        <activity android:name=".Fragment.Practice" />
+        <activity android:name=".UI.Recycler_View" />
+        <activity android:name=".UI.Listview_Middle" />
+        <activity android:name=".UI.List_View" />
+        <activity android:name=".Fragment.TestFra" />
+        <activity android:name=".UI.Self_control" />
+        <activity android:name=".UI.Framelayout" />
+        <activity android:name=".UI.Relativity" />
+        <activity android:name=".UI.Bu_Ju" />
+        <activity
+            android:name=".UI.Compnent"
+            android:label="UI">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".Activity.DialogActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".Activity.NormalActivity" />
+        <activity android:name=".Activity.Second_Activity" />
+        <activity android:name=".Activity.Intent_learn">
+            <intent-filter>
+                <action android:name="com.example.activity.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.add_one" />
+            </intent-filter>
+        </activity> <!-- <activity -->
+        <!-- android:name=".Activity.First_Activity" -->
+        <!-- android:label="App"> -->
+        <!-- <intent-filter> -->
+        <!-- &lt;!&ndash;                <action android:name="android.intent.action.MAIN" />&ndash;&gt; -->
+        <!-- &lt;!&ndash;                <category android:name="android.intent.category.LAUNCHER" />&ndash;&gt; -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity android:name=".MainActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+    </application>
+
+</manifest>
